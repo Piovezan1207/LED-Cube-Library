@@ -13,7 +13,7 @@
 class Cube
 {
 public:
-    Cubee(int Andar1, int Andar2, int Andar3, int LED1, int LED2, int LED3, int LED4, int LED5, int LED6, int LED7, int LED8, int LED9)
+    Cube(int Andar1, int Andar2, int Andar3, int LED1, int LED2, int LED3, int LED4, int LED5, int LED6, int LED7, int LED8, int LED9)
     {
         byte LEDD[3][10] = {{
                                 Andar1,
@@ -60,11 +60,16 @@ public:
             }
         }
     }
-    Efeitos(int Num);
+    void Efeitos(int Num);
 
 private:
     //int Andar1X, Andar2X, Andar3X, LED1X, LED2X, LED3X, LED4X, LED5X, LED6X, LED7X, LED8X, LED9X;
     byte LED[3][10];
+    void Acender(byte Andar, byte Luz, bool Estado)
+    {
+        digitalWrite(LED[Andar - 1][0], !Estado);
+        digitalWrite(LED[Andar - 1][Luz], Estado);
+    }
 };
 
 #endif
