@@ -13,6 +13,7 @@
 class Cube
 {
 public:
+    void Config();
     Cube(int Andar1, int Andar2, int Andar3, int LED1, int LED2, int LED3, int LED4, int LED5, int LED6, int LED7, int LED8, int LED9)
     {
         byte LEDD[3][10] = {{

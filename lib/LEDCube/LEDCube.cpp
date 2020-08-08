@@ -5,6 +5,15 @@
 #include "avr/io.h"
 #include "LEDCube.h"
 
+void Cube::Config()
+{
+
+    for (byte i = 2; i <= 13; i++)
+        pinMode(i, OUTPUT);
+    for (byte i = 0; i <= 2; i++)
+        digitalWrite(LED[i][0], HIGH);
+}
+
 void Cube::Efeitos(int Num)
 {
 

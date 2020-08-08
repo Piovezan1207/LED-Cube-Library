@@ -1,10 +1,14 @@
 #include <Arduino.h>
 #include <LEDCube.h>
 
-void setup() {
-  // put your setup code here, to run once:
+Cube Cubo(13, 12, 11, 8, 9, 10, 7, 6, 5, 2, 3, 4);
+
+void setup()
+{
+  Cubo.Config();
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  Cubo.Efeitos(1);
 }
